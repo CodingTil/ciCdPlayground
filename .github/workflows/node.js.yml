@@ -28,10 +28,6 @@ jobs:
       continue-on-error: true
     - run: yarn test:e2e
       continue-on-error: true
-    - name: Report JUnit test results
-      uses: actions/junit-report@v2
-      with:
-        test_results: junit.xml
     - name: Publish Test Report
       uses: mikepenz/action-junit-report@v5
       if: success() || failure()
